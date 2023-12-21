@@ -1,0 +1,27 @@
+The following external packages used versions:
+
+gym==0.21.0
+imageio==2.13.5
+matplotlib==3.7.4
+numpy==1.24.4
+torch==1.10.1
+tqdm==4.66.1
+
+To run training, validation, and gif creation, simply run:
+python3 LunarLanderPaulCrann.py
+
+If not constrained to cpu, then you might want to change line 16 accordingly.
+
+To change hyper parameters, change the following values on starting on line 145:
+# Parameters
+BATCH_SIZE = 128
+LR = 1e-3
+EPISODES = 5000
+TARGET_SCORE = 250.
+GAMMA = 0.99
+MEMORY_SIZE = 10000
+LEARN_STEP = 7
+TAU = 2e-3
+SAVE_NET = True
+
+If errors occur from trying to create and save the gifs, then comment out line 252+. (I mention this because I had a lot of issues getting this part to work that might be specific to my computer)
